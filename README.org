@@ -3,31 +3,27 @@
 * Getting started
 
   Download
-  [[https://github.com/vtex-soft/texsupport.springer-sola/raw/master/release/sola-project-template.zip][sola-project-template]]
+  [[https://github.com/vtex-soft/texsupport.isba-ba/raw/master/release/ba-project-template.zip][ba-project-template]]
   package and unzip it.
-  Rename the folder =sola-project-template= to =<your-project-name>=.
+  Rename the folder =ba-project-template= to =<your-project-name>=.
 
 * Package content
 
   - sty/ 
-    - ~spr-sola-addons.sty~
-    - ~solarphysics.cls~
-    - ~orcid.eps~
+    - ~imsart.cls~ driver class file
+    - ~imsart.sty~ style file
 
-  - bst/
-    - ~spr-mp-sola.bst~ - bibtex style file
+  - bib/
+    - ~ba.bst~ - bibtex style file
+    - ~sample.bib~ - bibliography database
 
-  - example/ - Sample paper. It contains useful information about typseting article  with solarphysics class file. 
-    - ~sola_example_6.tex~
-    - ~sola_example_6.pdf~
-    - ~sola_example_6.bbl~
-    - ~bib/sola_bibliography_example.bib~ - bibliography database
+  - doc/ - Sample paper. It contains useful information about typseting an article 
+    - ~badoc.tex~
+    - ~badoc.pdf~
     - ~img/fig1*.eps~
 
   - template/ 
-    - ~template.tex~            - template file 
-    - ~sola_example_labels.txt~ - extra information for labelling 
-    - ~sola_keyword_list.txt~   - keyword list
+    - ~template.tex~ - template file 
       
 * Submission
 
@@ -37,4 +33,4 @@
 * Bug reports
 
   Please submit bug report or feature requests
-  at [[https://github.com/vtex-soft/texsupport.springer-sola/issues][github page]].
+  at [[https://github.com/vtex-soft/texsupport.isba-ba/issues][github page]].

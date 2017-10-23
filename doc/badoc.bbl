@@ -1,0 +1,77 @@
+\begin{thebibliography}{10}
+\newcommand{\enquote}[1]{``#1''}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\ifx\endbibitem\undefined \let\endbibitem\relax\fi
+
+\bibitem[{Akaike(1973)}]{akaike}
+Akaike, H. (1973).
+\newblock \enquote{Information theory and an extension of the maximum
+  likelihood principle.}
+\newblock In Petrov, B.~N. and Csaki, F. (eds.), {\em Second International
+  Symposium on Information Theory\/}, 267--281. Budapest, Hungary: Akademiai
+  Kiado.
+\endbibitem
+
+\bibitem[{Ben-Akiva and Lerman(1985)}]{akivarsq}
+Ben-Akiva, M. and Lerman, S.~R. (1985).
+\newblock {\em Discrete Choice Analysis: \uppercase{T}heory and Application to
+  Travel Demand\/}.
+\newblock Cambridge, MA: MIT Press.
+\endbibitem
+
+\bibitem[{Dyke and Patterson(1952)}]{dyke}
+Dyke, G.~V. and Patterson, H.~D. (1952).
+\newblock \enquote{Analysis of factorial arrangements when the data are
+  proportions.}
+\newblock {\em Biometrics\/}, 8: 1--12.
+\endbibitem
+
+\bibitem[{Goossens et~al.(1994)Goossens, Mittelbach, and Samarin}]{companion}
+Goossens, M., Mittelbach, F., and Samarin, A. (1994).
+\newblock {\em The \LaTeX{} Companion\/}.
+\newblock Reading, MA: Addison--Wesley.
+\endbibitem
+
+\bibitem[{Greene(2000)}]{greene}
+Greene, W. (2000).
+\newblock {\em Econometric Analysis\/}.
+\newblock Upper Saddle River, NJ: Prentice--Hall, 4th edition.
+\endbibitem
+
+\bibitem[{Hilbe(1993a)}]{hilbeglm}
+Hilbe, J. (1993a).
+\newblock \enquote{Generalized linear models.}
+\newblock In {\em Bayesian Analysis Technical Bulletin Reprints\/}, volume~2,
+  149--159. College Station, TX: Bayesian Analysis Press.
+\endbibitem
+
+\bibitem[{Hilbe(1993b)}]{hilbetech}
+--- (1993b).
+\newblock \enquote{Log Negative Binomial Regression as a Generalized Linear
+  Model.}
+\newblock Technical Report Technical Report 26, Graduate College Committee on
+  Statistics.
+\endbibitem
+
+\bibitem[{Hilbe(1994)}]{hilbe}
+--- (1994).
+\newblock \enquote{Generalized linear models.}
+\newblock {\em The American Statistician\/}, 48(3): 255--265.
+\endbibitem
+
+\bibitem[{Kendall and Stuart(1979)}]{kstuart}
+Kendall, M. and Stuart, A. (1979).
+\newblock {\em The Advanced Theory of Statistics\/}, volume~2.
+\newblock London: Charles Griffin \& Company, 4th edition.
+\endbibitem
+
+\bibitem[{Maddala(1992)}]{maddalacntrsq}
+Maddala, G.~S. (1992).
+\newblock {\em Introduction to Econometrics\/}.
+\newblock New York: MacMillan, 2d edition.
+\endbibitem
+
+\end{thebibliography}
