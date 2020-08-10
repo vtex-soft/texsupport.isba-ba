@@ -144,10 +144,14 @@
 % enable writing to .aux
 %
 \newif\if@supertoc \@supertocfalse
+\newif\if@changetoc \@changetocfalse
 %
 \newif\if@updated@thanksref \@updated@thanksreffalse
 %
 % Information about journals
+%
+\def\set@generic{\def\@tempa{-generic}\ifx\journal@id\@tempa\let\affiliation\@gobble\fi}
+\AtEndOfPackage{\set@generic}
 %
 \DeclareOption{ba}{%
     \def\journal@id{-ba}%
@@ -157,6 +161,7 @@
     \def\journal@url{https://bayesian.org/resources/bayesian-analysis/}%
     \@balayouttrue
     \@noundefthanksreftrue
+    \@updated@thanksreftrue
     \@addressasfootnotetrue
     }
 %
@@ -407,7 +412,7 @@
 \def\journal@name{}
 \def\journal@url{}
 \def\journal@issn{}
-\def\journal@id{}
+\def\journal@id{-generic}
 \def\paper@url{}
 \def\info@line{}
 \def\copyrightowner@text{}
@@ -4597,7 +4602,6 @@
 \newcommand*\l@begintocitem[2]{}
 \newcommand*\l@endtocitem[2]{}
 %
-\newif\if@changetoc \@changetocfalse
 \@ifclassloaded{article}{\@changetoctrue}{}
 %
 \if@changetoc
