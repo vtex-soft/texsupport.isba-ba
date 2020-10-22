@@ -65,10 +65,9 @@
 % Requires Latex2e, ver.2000.06
 %
 \def\imsfmt@name{imsart}
-\def\imsfmt@version{2020/08/26}
+\def\imsfmt@version{2020/10/23}
 %
-\ProvidesFile{imsart.sty}
-        [\imsfmt@version\space IMS article style (VS)]
+\ProvidesFile{imsart.sty}[\imsfmt@version\space IMS article style]
 %
 \RequirePackage{etoolbox}
 %
@@ -346,13 +345,6 @@
     \numberlines@false
     }
 %
-% use this option for pre-publication (preprint):
-\DeclareOption{preprint}{%
-    \singlespacing
-    \AtBeginDocument{\let\info@line\@empty}%
-    \numberlines@false
-    }
-%
 % use this option for pre-edition
 \DeclareOption{preedit}{%
     \doublespacing
@@ -440,7 +432,7 @@
 \@input{\imsfmt@name.cnf}
 %
 % Execute options
-\ExecuteOptions{infoline}
+\ExecuteOptions{}
 \ProcessOptions
 %
 \if@old@layout
@@ -2326,11 +2318,11 @@
             \noindent
             \@ifundefined{@stitle}{}{\stitle@fmt{\@stitle}}%
             \@stitlepost
-            (%
+            \ifnum\slink@data@exists>\z@(\fi
             \@ifundefined{slink@doi}{}{\slink@doi@fmt}%
             \@ifundefined{slink@url}{}{\slink@url@fmt}%
             \@ifundefined{@sdatatype}{}{; \@sdatatype}%
-            ).
+            \ifnum\slink@data@exists>\z@)\else\unskip\fi.
             \@ifundefined{@sdescription}{}{\@sdescription}%
             \par
             }%
@@ -4468,13 +4460,14 @@
 % \ref{suppA}
 % \hyperlink{suppA}{text}
 %
+\def\slink@data@exists{0}
 \def\supplement@name{Supplementary Material}
 %
 \def\sname#1{\def\@sname{#1}\def\@currentlabel{#1}}
 \def\stitle#1{\def\@stitle{#1}}
-\def\sdatatype#1{\def\@sdatatype{#1}}
+\def\sdatatype#1{\def\@sdatatype{#1}\xdef\slink@data@exists{1}}
 \def\sfilename#1{}
-\def\slink[#1]#2{\expandafter\def\csname slink@#1\endcsname{#2}}
+\def\slink[#1]#2{\expandafter\def\csname slink@#1\endcsname{#2}\xdef\slink@data@exists{1}}
 \def\sdescription#1{\def\@sdescription{#1}}
 %
 \def\suppsection@fmt{\specialsection*{\supplement@name}}
@@ -4533,11 +4526,11 @@
         {\stitle@fmt{\@stitle}}%
     %
     \\
-    (%
+    \ifnum\slink@data@exists>\z@(\fi
     \@ifundefined{slink@doi}{}{\slink@doi@fmt}%
     \@ifundefined{slink@url}{}{\slink@url@fmt}%
     \@ifundefined{@sdatatype}{}{; \@sdatatype}%
-    ).
+    \ifnum\slink@data@exists>\z@). \fi
     \@ifundefined{@sdescription}{}{\@sdescription}%
     \par
     }
