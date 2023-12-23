@@ -65,7 +65,7 @@
 % Requires Latex2e, ver.2000.06
 %
 \def\imsfmt@name{imsart}
-\def\imsfmt@version{2023/11/24}
+\def\imsfmt@version{2023/12/23}
 %
 \ProvidesFile{imsart.sty}[\imsfmt@version\space IMS article style]
 %
@@ -4565,7 +4565,7 @@
         {%
             \vskip0.5\baselineskip
             \small
-            {\noindent\normalfont\sffamily\bfseries\acknowledgementsname}\par
+            {\noindent\normalfont\sffamily\bfseries #1}\par
             \begingroup\parindent 0pt\parskip 0.5\baselineskip
         }%
         {\endgroup}
